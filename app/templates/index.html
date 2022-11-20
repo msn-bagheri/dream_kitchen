@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+	{% load static %}
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<!-- <div class="top-menu"> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center logo-wrap">
+						<div id="fh5co-logo"><a href="{% url 'index' %}">Dream Kitchen<span>.</span></a></div>
+					</div>
+					<div class="col-xs-12 text-center menu-1 menu-wrap">
+						<ul>
+							<li class="active"><a href="{% url 'index' %}">Home</a></li>
+							<li><a href="{% url 'gallery' %}">Gallery</a></li>
+							<li><a href="{% url 'reservation' %}">Book Online</a></li>
+							<li><a href="{% url 'about' %}">About</a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url({% static 'images/hero_11.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="display-t js-fullheight">
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<h1>Make Your Dream Kitchen Reality</h1>
+							<h2>We aim to add real value to your home and life.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-about" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+					<img src="{% static 'images/hero_1.jpeg' %}" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+				</div>
+				<div class="col-md-5 col-md-push-1 animate-box">
+					<div class="section-heading">
+						<h2>The Dream Kitchen</h2>
+						<p>Our homes tell a story about us.    We want them to uniquely reflect our sense of style and personality.  To be inviting spaces where we can gather with our friends and family.
+							​
+							We also want them to be an expression of beauty and to function in a way that simplifies our life.
+							​
+							At My Design Cafe we work with you to simplify these goals, create a vision and bring your dreams to life.</p>
+						<p><a href="{% url 'about' %}" class="btn btn-primary btn-outline">Our History</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-featured-menu" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>EXPLORE OUR WORLD</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Designing is not just what we do. It’s who we are.
+								A dash of inspiration, a sprinkle of creativity… and now we’re cooking! Our blog is a hub of all things kitchen-related, from design techniques to the tastiest recipes.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+					<div class="fh5co-item">
+						<img src="{% static 'images/kitchen3.jpg' %}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>INDIVIDUALLY INSPIRED
+							DOWN TO EVERY DETAIL</h3>
+						<p>Whatever your preferred style of kitchen, whether classic Shaker or more contemporary, our expert team of designers and craftsmen will partner with you to create the perfect design for your needs of flawless quality and effortless functionality.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+					<div class="fh5co-item margin_top">
+						<img src="{% static 'images/kitchen_1.jpg' %}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>SEAMLESS & STRUCTURED</h3>
+						<p>At Life, we’re passionate about offering something for everyone; from the ultra-contemporary through to the timelessly classic, and everything in between.</p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+					<div class="fh5co-item">
+						<img src="{% static 'images/kitchen_6.jpg' %}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Personalised for You</h3>
+						<p>Kitchens are about people. The talent, skill and dedication of those creating them meeting the needs and goals of those who will enjoy them. The magic happens when it all starts to come together and never fails to give me genuine professional satisfaction. Come and discover what our team can do for you.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+					<div class="fh5co-item margin_top">
+						<img src="{% static 'images/kitchen_5.jpg' %}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>EXPERT LAYOUT</h3>
+						<p>Whether you have an open-plan, galley or U-shaped kitchen, the placement of key features – such as your sink and hob – should be harmonious, enabling you to move freely around your kitchen space. Whatever your style,  layout or lifestyle, a kitchen should be a space that brings people together.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-featured-testimony" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>IT’S ALL ABOUT TEAMWORK</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>It’s in our DNA to make beautiful, impeccably functional furniture, but it’s our customers that bring our work to life and give it meaning.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-5 animate-box img-to-responsive animate-box" data-animate-effect="fadeInLeft">
+						<img src="{% static 'images/person_1.jpg' %}" alt="">
+				</div>
+				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
+					<blockquote>
+						<p> &ldquo; We’re  very happy with our new kitchen. Great company, friendly staff, clean/unique designs and very high quality joinery.&rdquo;</p>
+						<p class="author"><cite>&mdash; Jane Smith</cite></p>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-slider" class="fh5co-section animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="fh5co-heading">
+						<h2>Our Philosophy</h2>
+						<p>Since our beginning, we have firmly believed that <em>Dream Kitchen</em> is about you, not us.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-push-1 animate-box">
+					<aside id="fh5co-slider-wrwap">
+					<div class="flexslider">
+						<ul class="slides">
+					   	<li style="background-image: url({% static 'images/kitchen_7.jpg' %});">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+						   					<div class="desc">
+													<h2>Cutting edge design, understated luxury</h2>
+													<p>We create innovative, functional, luxury kitchens and furniture, designed to be used and built to last.</p>
+													<p><a href="{% static 'about'%}" class="btn btn-primary btn-outline">Learn More</a></p>
+						   					</div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url({% static 'images/kitchen_9.jpg' %});">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+						   					<div class="desc">
+													<h2>Founded by architects, led by passion for design</h2>
+													<p>friendly team with an unrivalled understanding of the whole creative process, ensuring we deliver above and beyond your expectations.</p>
+													<p><a href="{% static 'about'%}" class="btn btn-primary btn-outline">Learn More</a></p>
+						   					</div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url({% static 'images/kitchen_10.jpg' %});">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+						   					<div class="desc">
+													<h2>Innovative materials, textures and colours</h2>
+													<p>Using traditional craftsmanship and precise technology, our team of independent designers, architects and craftsmen offer our clients an almost limitless choice of materials</p>
+													<p><a href="{% static 'about'%}" class="btn btn-primary btn-outline">Learn More</a></p>
+						   					</div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>		   	
+					  	</ul>
+				  	</div>
+				</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--	<div id="fh5co-blog" class="fh5co-section">-->
+<!--		<div class="container">-->
+<!--			<div class="row animate-box">-->
+<!--				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">-->
+<!--					<h2>Events</h2>-->
+<!--					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="row">-->
+<!--				<div class="col-md-4">-->
+<!--					<div class="fh5co-blog animate-box">-->
+<!--						<a href="#" class="blog-bg" style="background-image: url({% static 'images/kitchen_8.jpg' %});"></a>-->
+<!--						<div class="blog-text">-->
+<!--							<span class="posted_on">Feb. 15th 2016</span>-->
+<!--							<h3><a href="#">Photoshoot On The Street</a></h3>-->
+<!--							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--							<ul class="stuff">-->
+<!--								<li><i class="icon-heart2"></i>1.2K</li>-->
+<!--								<li><i class="icon-eye2"></i>2K</li>-->
+<!--								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>-->
+<!--							</ul>-->
+<!--						</div> -->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-md-4">-->
+<!--					<div class="fh5co-blog animate-box">-->
+<!--						<a href="#" class="blog-bg" style="background-image: url({% static 'images/kitchen_11.jpg' %});"></a>-->
+<!--						<div class="blog-text">-->
+<!--							<span class="posted_on">Feb. 15th 2016</span>-->
+<!--							<h3><a href="#">Surfing at Philippines</a></h3>-->
+<!--							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--							<ul class="stuff">-->
+<!--								<li><i class="icon-heart2"></i>1.2K</li>-->
+<!--								<li><i class="icon-eye2"></i>2K</li>-->
+<!--								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>-->
+<!--							</ul>-->
+<!--						</div> -->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-md-4">-->
+<!--					<div class="fh5co-blog animate-box">-->
+<!--						<a href="#" class="blog-bg" style="background-image: url({% static 'images/kitchen_14.jpg' %});"></a>-->
+<!--						<div class="blog-text">-->
+<!--							<span class="posted_on">Feb. 15th 2016</span>-->
+<!--							<h3><a href="#">Focus On Uderwater</a></h3>-->
+<!--							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--							<ul class="stuff">-->
+<!--								<li><i class="icon-heart2"></i>1.2K</li>-->
+<!--								<li><i class="icon-eye2"></i>2K</li>-->
+<!--								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>-->
+<!--							</ul>-->
+<!--						</div> -->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+	
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url({% static 'images/kitchen_2.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Book Online</h2>
+					<p>Let’s discuss your dreams Please make an appointment ahead of your visit</p>
+					<p><a href="{% url 'reservation' %}" class="btn btn-primary btn-outline">Book Now</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>Dream Kitchen</h4>
+					<p>Make Your Dream Kitchen Reality.</p>
+				</div>
+				<div class="col-md-2 col-md-push-1 fh5co-widget">
+					<h4>Links</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="{% url 'index'%}">Home</a></li>
+						<li><a href="{% url 'about'%}">About</a></li>
+						<li><a href="{% url 'contact'%}">Contact</a></li>
+						<li><a href="{% url 'gallery'%}">Gallery</a></li>
+					</ul>
+				</div>
+
+
+				<div class="col-md-4 col-md-push-1 fh5co-widget">
+					<h4>Contact Information</h4>
+					<ul class="fh5co-footer-links">
+						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2022, All Rights Reserved.</small>
+<!--						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>-->
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter2"></i></a></li>
+							<li><a href="#"><i class="icon-facebook2"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
+
