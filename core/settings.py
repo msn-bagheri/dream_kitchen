@@ -22,9 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pt-ss_^&jn3f20i1*0_0us702sk_rh%0h*++t+r2ck+1j^47-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vividid.ca', 'localhost',]
+CORS_ALLOWED_ORIGINS = [
+    "http://vividid.ca",
+    "localhost",
+    "http://www.vividid.ca",
+]
 
 # Application definition
 
@@ -35,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'app',
 ]
 
@@ -110,9 +116,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/home/iy1uyhzjmzlr/public_html/staticfiles'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = (os.path.join('static'),)
 
