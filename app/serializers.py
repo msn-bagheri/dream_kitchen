@@ -1,21 +1,20 @@
 from rest_framework import serializers
 
-from app.models import Post
+from app.models import UserForm
 
 
-class PostSerializer(serializers.ModelSerializer):
+class UserFormSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
+        model = UserForm
         fields = (
-            'title',
-            'description',
-        )
-
-
-class PostListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = (
-            'id',
-            'title',
+            'layout',
+            'a',
+            'b',
+            'c',
+            'd',
+            'email',
+            'budget',
+            'current_kitchen',
+            'desired_kitchen',
+            'is_island',
         )

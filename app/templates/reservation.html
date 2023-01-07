@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <html>
+	{% load static %}
+
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Vivid Design</title>
+	<link rel="icon" type="image/png" href="{% static 'images/kitchen_favicon.png' %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
-
 
 	<!--
 	//////////////////////////////////////////////////////
@@ -38,7 +40,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
-	{% load static %}
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -117,40 +118,61 @@
 					</div>
 				</div>
 
+
+				<div class="fh5co-section" style="margin-bottom:10px">
+					<div class="container"  style="display:flex;flex-direction:column;">
+						<h2 style="margin-right:auto;margin-left:auto;color:white">First Take a Look at Kitchen Layouts</h2>
+						<div class="row">
+							<div class="col-md-6 col-md-push-1 col-lg-10">
+								<img src="{% static 'images/test.svg' %}" style="width:100%">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
-					<form action="{% url 'design' %}" method="post" id="form-wrap">
+					<form  enctype="multipart/form-data" action="{% url 'design' %}" method="POST" id="form-wrap">
 						{% csrf_token %}
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="first_name">First Name</label>
-								<input type="text" class="form-control" id="first_name" name="first_name" required>
+								<label for="layout">Your Kitchen's Layout</label>
+								<select class="form-control" id="layout" name="layout" required>
+									<option value="0" selected style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">Single-Wall Kitchen</option>
+									<option value="1"  style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">Galley Kitchen</option>
+									<option value="2"  style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">L-Shaped Kitchen</option>
+									<option value="3"  style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">U-Shaped Kitchen</option>
+									<option value="4"  style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">Peninsula Kitchen</option>
+									<option value="5"  style="background: rgba(0, 0, 0, 0.3);color: #fff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);">Island Kitchen</option>
+								</select>
+							</div>
+						</div>
+						<h3 style="margin-right:auto;margin-left:auto;color:white;margin-top:80px;">Fill This Section Based On Your Kitchen Layout</h3>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="a">A</label>
+								<input type="text" class="form-control" id="a" name="a" required>
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="last_name">Last Name</label>
-								<input type="text" class="form-control" id="last_name" name="last_name" required>
+								<label for="b">B</label>
+								<input type="text" class="form-control" id="b" name="b" placeholder="Optional">
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="address">Address</label>
-								<input type="text" class="form-control" id="address" name="address" required>
+								<label for="c">C</label>
+								<input type="text" class="form-control" id="c" name="c" placeholder="Optional">
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="town">Town</label>
-								<input type="text" class="form-control" id="town" name="town" required>
+								<label for="d">D</label>
+								<input type="text" class="form-control" id="d" name="d" placeholder="Optional">
 							</div>
 						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="phone">Phone</label>
-								<input type="text" class="form-control" id="phone" name="phone" required>
-							</div>
-						</div>
-						<div class="row form-group">
+						<div class="row form-group" style="margin-top:80px">
 							<div class="col-md-12">
 								<label for="email">Email</label>
 								<input type="email" class="form-control" id="email" name="email" required>
@@ -158,8 +180,30 @@
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="kitchen">Dimensions of Your kitchen</label>
-								<input type="text" class="form-control" id="kitchen" name="kitchen_dimensions" required>
+								<h4 style="margin-right:auto;margin-left:auto;color:white;">Do You Want Island?</h4>
+								<label for="yes">Yes</label>
+								<input type="radio" id="yes" name="is_island" value="true" required>
+								<label for="no">No</label>
+								<input type="radio" id="no" name="is_island" value="false" required>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="current_kitchen">Picture Of Your Current Kitchen</label>
+								<input type="file" class="form-control" id="current_kitchen" name="current_kitchen">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="budget">Your Budget</label>
+								<input type="text" class="form-control" id="budget" name="budget" required>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="desired_kitchen">Picture Of Your Desired Kitchen</label>
+								<input type="file" class="form-control" id="desired_kitchen" name="desired_kitchen">
 							</div>
 						</div>
 
@@ -235,8 +279,8 @@
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
 					<ul class="fh5co-footer-links">
-						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+						<li>2710 Fraser Street, <br> Vancouver British Columbia</li>
+						<li><a href="tel://+12508032894">+1 2508 0328 94</a></li>
 						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
 					</ul>
 				</div>
@@ -247,7 +291,6 @@
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; 2022, All Rights Reserved.</small>
-<!--						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>-->
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
@@ -288,37 +331,35 @@
 	<script src="{% static 'js/bootstrap-datetimepicker.js' %}"></script>
 
 	<script>
-		$("#form-wrap").submit(function(e) {
+		jQuery("#form-wrap").submit(function(e) {
 
 			e.preventDefault(); // avoid to execute the actual submit of the form.
 
+			var formData = new FormData($(this)[0]);
 			var form = $(this);
 			var actionUrl = form.attr('action');
 
-				$.ajax({
-					type: "POST",
-					url: actionUrl,
-					data: form.serialize(), // serializes the form's elements.
-					success: function(data)
-					{
-							$(".modal-body #responseMsg").html(data);
-							$('#demoModal').modal('show');
-							console.log(data)
-					},
-					error: function(data)
-					{
-							$(".modal-body #responseMsg").html("Try Again");
-							$(".modal-footer .btn").hide();
-							$('#demoModal').modal('show');
-							console.log(data)
-					}
-				});
+			jQuery.ajax({
+				type: "POST",
+				url: actionUrl,
+				data: formData, // serializes the form's elements.
+				processData: false,
+				contentType: false,
+				success: function(data)
+				{
+						$(".modal-body #responseMsg").html(data);
+						$('#demoModal').modal('show');
+				},
+				error: function(data)
+				{
+						$(".modal-body #responseMsg").html("Try Again");
+						$(".modal-footer .btn").hide();
+						$('#demoModal').modal('show');
+				}
+			});
 
 		});
 	</script>
-
-	<!-- Main -->
-	<script src="{% static 'js/main.js' %}"></script>
 
 	</body>
 </html>
