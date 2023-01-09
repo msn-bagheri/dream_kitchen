@@ -121,7 +121,7 @@
 
 				<div class="fh5co-section" style="margin-bottom:10px">
 					<div class="container"  style="display:flex;flex-direction:column;">
-						<h2 style="margin-right:auto;margin-left:auto;color:white">First Take a Look at Kitchen Layouts</h2>
+						<h2 style="margin-right:auto;margin-left:auto;color:#F57328;font-weight:bold">First Take a Look at Kitchen Layouts</h2>
 						<div class="row">
 							<div class="col-md-6 col-md-push-1 col-lg-10">
 								<img src="{% static 'images/test.svg' %}" style="width:100%">
@@ -147,7 +147,7 @@
 								</select>
 							</div>
 						</div>
-						<h3 style="margin-right:auto;margin-left:auto;color:white;margin-top:80px;">Fill This Section Based On Your Kitchen Layout</h3>
+						<h3 style="margin-right:auto;margin-left:auto;color:#000;margin-top:20px;">Fill This Section Based On Your Kitchen Layout</h3>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="a">A</label>
@@ -172,40 +172,45 @@
 								<input type="text" class="form-control" id="d" name="d" placeholder="Optional">
 							</div>
 						</div>
-						<div class="row form-group" style="margin-top:80px">
-							<div class="col-md-12">
-								<label for="email">Email</label>
-								<input type="email" class="form-control" id="email" name="email" required>
-							</div>
-						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<h4 style="margin-right:auto;margin-left:auto;color:white;">Do You Want Island?</h4>
+								<h3 style="margin-right:auto;margin-left:auto;color:#000;">Do You Want Island?</h3>
 								<label for="yes">Yes</label>
 								<input type="radio" id="yes" name="is_island" value="true" required>
 								<label for="no">No</label>
 								<input type="radio" id="no" name="is_island" value="false" required>
 							</div>
 						</div>
+						<hr>
+						<div class="row form-group" style="margin-top:60px;margin-bottom:60px;">
+							<div class="col-md-12">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email" name="email" required>
+							</div>
+						</div>
+						<hr>
 
-						<div class="row form-group">
+						<div class="row form-group" style="margin-top:60px;">
 							<div class="col-md-12">
 								<label for="current_kitchen">Picture Of Your Current Kitchen</label>
 								<input type="file" class="form-control" id="current_kitchen" name="current_kitchen">
 							</div>
 						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="budget">Your Budget</label>
-								<input type="text" class="form-control" id="budget" name="budget" required>
-							</div>
-						</div>
-						<div class="row form-group">
+						<div class="row form-group" style="margin-bottom:60px;">
 							<div class="col-md-12">
 								<label for="desired_kitchen">Picture Of Your Desired Kitchen</label>
 								<input type="file" class="form-control" id="desired_kitchen" name="desired_kitchen">
 							</div>
 						</div>
+						<hr>
+
+						<div class="row form-group" style="margin-top:60px;">
+							<div class="col-md-12">
+								<label for="budget">Your Budget</label>
+								<input type="text" class="form-control" id="budget" name="budget" required>
+							</div>
+						</div>
+
 
 						<div class="row form-group">
 							<div class="col-md-12">

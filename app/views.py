@@ -33,7 +33,6 @@ def design_consultation(request):
         data = request.POST
         data._mutable = True
         data.update(request.FILES)
-        print(data)
         serializer = UserFormSerializer(data=request.POST)
         if serializer.is_valid():
             serializer.save()
